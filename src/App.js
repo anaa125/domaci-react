@@ -13,8 +13,8 @@ import { useState } from "react";
 function App() {
   const [likedNum, setLikedNum] = useState(0);
   //inicijalno stanje prazan niz
-  const [likedCars, setLikedCars] = useState([]);
-  const [cars] = useState([
+  const [likedPerfumes, setLikedPerfumes] = useState([]);
+  const [perfumes] = useState([
     {
       id: 1,
       title: "Gucci Guilty",
@@ -42,8 +42,8 @@ function App() {
     },
   ]);
   function refreshLiked() {
-    let newPerfumes = perfumes.filter((c) => p.amount > 0);
-    setLikedCars(newPerfumes);
+    let newPerfumes = perfumes.filter((p) => p.amount > 0);
+    setLikedPerfumes(newPerfumes);
   }
 
 
@@ -58,18 +58,20 @@ function App() {
   });
   refreshLiked();}
 
-  function removePerfume(title,id) {
-    if (likedNum > 0) {
-    console.log("Dislajkovan je parfem: " + title);
-  setLikedNum(likedNum -1);
-  cars.forEach((p) => {
-    if (p.id === id) {
-      p.amount--;
+  function removePerfume(title,id) { 
+    perfumes.forEach((p) => {
+      if (p.id === id) {
+   if (p.amount > 0) {
+      console.log("Dislajkovan je parfem: " + title);
+    setLikedNum(likedNum -1); 
+        p.amount--;
+      }else{alert("Broj lajkova je vec 0." );
+   }
     }
-    console.log(p.amount);
-});}
-   else{alert("Broj lajkova je vec 0." );
- }   refreshLiked();}  
+      console.log(p.amount);
+  });
+        refreshLiked();}  
+   
 
 
   return (
@@ -90,3 +92,4 @@ function App() {
     </BrowserRouter>
   );
 }
+export default App;
