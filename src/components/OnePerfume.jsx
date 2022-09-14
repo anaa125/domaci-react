@@ -1,23 +1,52 @@
 import React from 'react';
-import { BsSuitHeart } from "react-icons/bs";
-const OnePerfume = () => {
+import { BiLike,BiDislike } from "react-icons/bi";
 
-    return (
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https:/picsum.photos/200"
-          alt="slika parfema"
-        />
-        <div className="card-body">
-          <h1 className="card-title">Car name</h1>
-          <p className="card-text">This is description of the products.</p>
-        </div>
-        <button className="btn">
-          <BsSuitHeart />
-        </button>
-      </div>
-    );
-};
+    //const OneCar = (props) => {
+      //u zagrade stavljamo objekat koji hocemo da izvucemo iz propsa
 
-export default OnePerfume;
+      function OnePerfume({perfume,onAdd,onDelete, inLikedPerfumes}){
+    
+        return (
+            <div className={inLikedPerfumes === 1 ? "card" : "card-liked"}>
+            <img
+              className={inLikedPerfumes ===1 ? "card-img-top" :"card-img-left"}
+              src={perfume.img}
+              alt="slika parfema "
+            />
+            <div className={inLikedPerfumes === 1 ? "card-body" : "card-body-left"}>
+              {inLikedPerfumes === 1 ? (
+            <>
+             <h1 className="card-title">{perfume.title}</h1>
+              <p className="card-text">{perfume.description}</p>
+    
+            </>
+          ) : (
+            <>
+             <h1 className="card-title">{perfume.title}</h1>
+              <p className="card-text">{perfume.description}</p>
+              <h2 >Ukupan broj lajkova: {perfume.amount}</h2>
+            </>
+          )}
+            </div>
+    
+    {inLikedPerfumes=== 1 ? (
+            <>
+              <button
+                className="btn" id='prvoDugme'
+                onClick={() => onAdd(perfume.title, perfume.id)}
+              >
+                <BiLike />
+              </button>
+              <button className="btn"
+              onClick={() => onDelete(perfume.title, perfume.id)}
+              >
+                <BiDislike />
+              </button>
+            </>
+          ) : (
+           <>
+           </>
+          )}
+          </div>
+        );
+    };
