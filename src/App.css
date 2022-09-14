@@ -1,18 +1,18 @@
 .navBar {
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.658);
-  color: orangered;
+  background-color:rgb(29, 155, 113) ;
+  color: white;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  border-bottom-color: orangered;
+  border-bottom-color: white;
   align-items: center;
   min-height: 40px;
   padding-left: 25px;
   font-size: larger;
 }
 body {
-  background-image: url("https://media-exp1.licdn.com/dms/image/C4D1BAQHzxyRAzj4T5Q/company-background_10000/0/1603740526909?e=2159024400&v=beta&t=s70FD8e2mL0wMJ0_hjcNybGkafoeqsAnSIIZKucj1gU");
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=996&t=st=1663192439~exp=1663193039~hmac=e1fcfc03100a8b0fe7bb3f5f4f46f7484d9e47d3ac6168a26f661a21ba00e20f");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,12 +21,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color:orangered;
+  color: white;
   margin-left: 30px;
 }
 
 .liked-num {
-  background-color: grey;
+  background-color:rgb(13, 67, 49);
   color: white;
   border-radius: 50%;
   text-align: center;
@@ -37,16 +37,17 @@ body {
   margin-left: 20px;
 }
 
-.all-cars {
+.all-perfumes {
   display: flex;
   margin: 20px;
 }
 
+
 .card {
-  background-color: rgba(0, 0, 0, 0.507);
+  background-color: white;
   border-style: solid;
   border-width: 3px;
-  border-color: rgba(255, 68, 0, 0.925);
+  border-color:  rgb(29, 155, 113);
   border-radius: 10%;
   max-width: 400px;
   margin: 90px 80px 100px 100px;
@@ -60,10 +61,10 @@ body {
 }
 .card-text {
   font-size: 20px;
+  color:  rgb(29, 155, 113);
 }
-
 .card-body {
-  color: whitesmoke;
+  color:  rgb(29, 155, 113);;
   margin: 10px;
   align-self: center;
   align-content: center;
@@ -74,29 +75,33 @@ body {
   margin-left: 155px;
 }
 .btn {
-  background-color: orangered;
-  color: white;
+  background-color:  rgb(29, 155, 113);;
+  color: black;
   border-radius: 5px;
   padding-top: 13px;
   padding-bottom: 7px;
   padding-left: 13px;
   padding-right: 13px;
-  margin: 6px;
+  margin: 8px;
   align-content: center;
   text-align: center;
   align-items: center;
-  border: 2px solid orangered;
+  border: 5px solid  rgb(29, 155, 113);
   cursor: pointer;
 }
 .navName {
-  color: orangered;
+  color:  white;
   font-size: 4.5vh;
-	@@ -94,25 +98,41 @@ a {
+  font-family: "Snell Roundhand", cursive;
+}
+a {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
 .naslov1 {
   margin-left: 750px;
-  color: orangered;
+  color: rgb(29, 155, 113);
   margin-bottom: -45px;
 }
 
@@ -108,11 +113,6 @@ body {
 }
 
 .card-liked {
-  background-color: rgba(0, 0, 0, 0.507);
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgba(255, 68, 0, 0.938);
-  border-radius: 15%;
   flex-direction: row;
   max-width: 800px;
   max-height: 400px;
@@ -126,10 +126,10 @@ body {
   border-top-left-radius: 20%;
   border-bottom-left-radius: 20%;
 }
+
 .card-body-left {
   margin-top: 80px;
-  margin-right: 20px;
-  color: white;
-
+  margin-right: 10px;
+  color: rgb(29, 155, 113);
   float: right;
 }
