@@ -7,7 +7,7 @@ const Perfumes = ({perfumes, onAdd, onDelete }) => {
     return (
         <div className="all-perfumes">
 
-            {perfumes.map((c) => (
+            {perfumes.map((p) => (
               //jedinica znaci da nije u korpi
         <OnePerfume perfume={p} key={p.id} onAdd={onAdd} onDelete={onDelete} inLikedPerfumes={1}/>
       ))}
@@ -15,4 +15,4 @@ const Perfumes = ({perfumes, onAdd, onDelete }) => {
         </div>
       );
     };
-	
+	export default Perfumes;

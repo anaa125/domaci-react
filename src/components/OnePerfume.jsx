@@ -50,3 +50,4 @@ import { BiLike,BiDislike } from "react-icons/bi";
           </div>
         );
     };
+    export default OnePerfume;

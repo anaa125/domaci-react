@@ -14,3 +14,4 @@ function NavBar({likedNum}) {
         </div>
       );
     }
+export default NavBar;
